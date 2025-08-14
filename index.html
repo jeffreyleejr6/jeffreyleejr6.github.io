@@ -1,18 +1,222 @@
-<section id="contact" style="background-color:#0056b3; color:white; padding:40px 20px; text-align:center;">
-  <h2 style="margin-bottom:20px;">Contact Us</h2>
-  <form action="mailto:your-email@example.com" method="post" enctype="text/plain" style="max-width:500px; margin:auto; text-align:left;">
-    
-    <label for="name">Name:</label><br>
-    <input type="text" id="name" name="name" required style="width:100%; padding:10px; margin-bottom:15px;"><br>
-    
-    <label for="email">Email:</label><br>
-    <input type="email" id="email" name="email" required style="width:100%; padding:10px; margin-bottom:15px;"><br>
-    
-    <label for="message">Message:</label><br>
-    <textarea id="message" name="message" rows="5" required style="width:100%; padding:10px; margin-bottom:15px;"></textarea><br>
-    
-    <button type="submit" style="background-color:white; color:#0056b3; padding:10px 20px; border:none; cursor:pointer; font-weight:bold;">
-      Send Message
-    </button>
-  </form>
-</section>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Supreme Finance Loan Company</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- Header -->
+    <header class="header">
+        <h1>Supreme Finance Loan Company</h1>
+        <p>
+            <a href="mailto:jeffreyleejr6@gmail.com">jeffreyleejr6@gmail.com</a> •
+            <a href="tel:+19376878469">(937) 687-8469</a> •
+            <a href="https://wa.me/15302080697" target="_blank">WhatsApp: (530) 208-0697</a>
+        </p>
+    </header>
+
+    <!-- Loan Information -->
+    <section class="loan-info">
+        <h2>Apply for a Loan in Minutes</h2>
+        <p>No stress, no long processes. Borrow from <strong>$2,000</strong> – <strong>$20,000,000</strong>.</p>
+        <ul>
+            <li>Quick review</li>
+            <li>Clear requirements</li>
+            <li>Direct human support</li>
+        </ul>
+    </section>
+
+    <!-- Loan Application Form -->
+    <section class="loan-section">
+        <form action="https://formspree.io/f/YOUR_FORM_ID" method="POST" class="loan-form">
+
+            <div class="form-group">
+                <label>First Name</label>
+                <input type="text" name="first_name" required>
+            </div>
+
+            <div class="form-group">
+                <label>Last Name</label>
+                <input type="text" name="last_name" required>
+            </div>
+
+            <div class="form-group">
+                <label>Email</label>
+                <input type="email" name="email" required>
+            </div>
+
+            <div class="form-group">
+                <label>Phone</label>
+                <input type="tel" name="phone" required>
+            </div>
+
+            <div class="form-group">
+                <label>Loan Amount (USD)</label>
+                <input type="number" name="loan_amount" required>
+            </div>
+
+            <div class="form-group">
+                <label>Purpose of Loan</label>
+                <input type="text" name="purpose" required>
+            </div>
+
+            <div class="form-group">
+                <label>Employment Status</label>
+                <select name="employment_status" required>
+                    <option value="">Select...</option>
+                    <option>Employed</option>
+                    <option>Self-Employed</option>
+                    <option>Unemployed</option>
+                    <option>Student</option>
+                    <option>Retired</option>
+                </select>
+            </div>
+
+            <div class="form-group">
+                <label>Monthly Income (USD)</label>
+                <input type="number" name="monthly_income" required>
+            </div>
+
+            <div class="form-group">
+                <label>Address</label>
+                <input type="text" name="address" required>
+            </div>
+
+            <div class="form-group">
+                <label>City</label>
+                <input type="text" name="city" required>
+            </div>
+
+            <div class="form-group">
+                <label>State / Region</label>
+                <input type="text" name="state" required>
+            </div>
+
+            <div class="form-group">
+                <label>Additional Info (Optional)</label>
+                <textarea name="additional_info"></textarea>
+            </div>
+
+            <div class="form-group checkbox">
+                <label>
+                    <input type="checkbox" required>
+                    I confirm the information provided is accurate and I agree to the application terms.
+                </label>
+            </div>
+
+            <button type="submit" class="submit-btn">Submit Application</button>
+        </form>
+    </section>
+
+</body>
+</html>
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    background-color: #f5f7fa;
+}
+
+/* Header */
+.header {
+    background-color: #003366;
+    color: white;
+    text-align: center;
+    padding: 20px;
+}
+
+.header a {
+    color: #ffdd00;
+    text-decoration: none;
+}
+
+.header a:hover {
+    text-decoration: underline;
+}
+
+/* Loan info section */
+.loan-info {
+    text-align: center;
+    padding: 20px;
+}
+
+.loan-info h2 {
+    color: #003366;
+}
+
+.loan-info ul {
+    list-style: none;
+    padding: 0;
+}
+
+.loan-info ul li {
+    margin: 5px 0;
+}
+
+/* Loan form */
+.loan-section {
+    display: flex;
+    justify-content: center;
+    padding: 20px;
+}
+
+.loan-form {
+    background: white;
+    padding: 25px;
+    border-radius: 8px;
+    width: 100%;
+    max-width: 600px;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+}
+
+.form-group {
+    margin-bottom: 15px;
+}
+
+.form-group label {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 6px;
+    color: #003366;
+}
+
+.form-group input,
+.form-group select,
+.form-group textarea {
+    width: 100%;
+    padding: 10px;
+    border-radius: 4px;
+    border: 1px solid #ccc;
+}
+
+textarea {
+    height: 80px;
+}
+
+.checkbox {
+    font-size: 0.9em;
+}
+
+.submit-btn {
+    background-color: #003366;
+    color: white;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 4px;
+    font-size: 1em;
+    cursor: pointer;
+    width: 100%;
+}
+
+.submit-btn:hover {
+    background-color: #0055a5;
+}
+
+/* Mobile-friendly */
+@media (max-width: 600px) {
+    .loan-form {
+        padding: 15px;
+    }
+}
