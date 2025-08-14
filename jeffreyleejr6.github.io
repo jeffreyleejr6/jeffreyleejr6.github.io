@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fast, Flexible Private Lending Solutions</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            background-color: #0b1c3b;
+            color: white;
+            text-align: center;
+        }
+        .container {
+            padding: 20px;
+            max-width: 800px;
+            margin: auto;
+        }
+        h1 {
+            font-size: 2.5em;
+            margin-bottom: 10px;
+        }
+        p {
+            font-size: 1.2em;
+            color: #d1d1d1;
+        }
+        .btn {
+            display: inline-block;
+            background-color: #3b82f6;
+            color: white;
+            padding: 12px 24px;
+            border-radius: 8px;
+            text-decoration: none;
+            font-weight: bold;
+            margin-top: 20px;
+        }
+        .btn:hover {
+            background-color: #2563eb;
+        }
+        .features {
+            margin-top: 20px;
+            font-size: 1em;
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+        }
+        .loan-calculator {
+            background-color: white;
+            color: black;
+            padding: 20px;
+            margin-top: 30px;
+            border-radius: 10px;
+        }
+        footer {
+            margin-top: 40px;
+            font-size: 0.9em;
+            color: #d1d1d1;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Fast, Flexible Private Lending Solutions</h1>
+        <p>Get the capital you need for real estate investments with competitive rates and quick approvals. Licensed private lender with 15+ years of experience.</p>
+        
+        <a href="YOUR-LOAN-APPLICATION-LINK" class="btn">Apply for Loan →</a>
+        <div class="features">
+            <span>✔ Licensed Lender</span>
+            <span>⏱ 24-48hr Approval</span>
+        </div>
+
+        <div class="loan-calculator">
+            <h2>Quick Loan Calculator</h2>
+            <label for="loanAmount">Loan Amount</label><br>
+            <input type="range" id="loanAmount" min="25000" max="5000000" value="100000" step="5000" oninput="updateLoanValue(this.value)">
+            <p id="loanValue">$100,000</p>
+        </div>
+    </div>
+
+    <footer>
+        📧 Email: jeffreyleejr6@gmail.com | 📞 Phone: (937) 687-8469 | 💬 WhatsApp: +1 (530) 208-0697
+    </footer>
+
+    <script>
+        function updateLoanValue(value) {
+            document.getElementById("loanValue").innerText = `$${Number(value).toLocaleString()}`;
+        }
+    </script>
+</body>
+</html>
