@@ -1,39 +1,91 @@
-<!-- CONTACT / APPLICATION FORM -->
-<section id="apply" class="container" style="max-width:720px;margin:48px auto;">
-  <h2 style="margin-bottom:16px;">Apply for a Loan</h2>
-  <p style="opacity:.85;margin-bottom:24px;">Fill this out and we’ll contact you shortly.</p>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fast, Flexible Private Lending Solutions</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            background-color: #0b1c3b;
+            color: white;
+            text-align: center;
+        }
+        .container {
+            padding: 20px;
+            max-width: 800px;
+            margin: auto;
+        }
+        h1 {
+            font-size: 2.5em;
+            margin-bottom: 10px;
+        }
+        p {
+            font-size: 1.2em;
+            color: #d1d1d1;
+        }
+        .btn {
+            display: inline-block;
+            background-color: #3b82f6;
+            color: white;
+            padding: 12px 24px;
+            border-radius: 8px;
+            text-decoration: none;
+            font-weight: bold;
+            margin-top: 20px;
+        }
+        .btn:hover {
+            background-color: #2563eb;
+        }
+        .features {
+            margin-top: 20px;
+            font-size: 1em;
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+        }
+        .loan-calculator {
+            background-color: white;
+            color: black;
+            padding: 20px;
+            margin-top: 30px;
+            border-radius: 10px;
+        }
+        footer {
+            margin-top: 40px;
+            font-size: 0.9em;
+            color: #d1d1d1;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Fast, Flexible Private Lending Solutions</h1>
+        <p>Get the capital you need for real estate investments with competitive rates and quick approvals. Licensed private lender with 15+ years of experience.</p>
+        
+        <a href="YOUR-LOAN-APPLICATION-LINK" class="btn">Apply for Loan →</a>
+        <div class="features">
+            <span>✔ Licensed Lender</span>
+            <span>⏱ 24-48hr Approval</span>
+        </div>
 
-  <form action="https://formspree.io/f/xkgzeozw" method="POST">
-    <!-- Replace the action URL above with YOUR Formspree endpoint -->
+        <div class="loan-calculator">
+            <h2>Quick Loan Calculator</h2>
+            <label for="loanAmount">Loan Amount</label><br>
+            <input type="range" id="loanAmount" min="25000" max="5000000" value="100000" step="5000" oninput="updateLoanValue(this.value)">
+            <p id="loanValue">$100,000</p>
+        </div>
+    </div>
 
-    <input type="text" name="name" placeholder="Full Name" required
-           style="width:100%;padding:14px 16px;margin:8px 0;border:1px solid #d8d8d8;border-radius:10px;">
+    <footer>
+        📧 Email: jeffreyleejr6@gmail.com | 📞 Phone: (937) 687-8469 | 💬 WhatsApp: +1 (530) 208-0697
+    </footer>
 
-    <input type="email" name="_replyto" placeholder="Email" required
-           style="width:100%;padding:14px 16px;margin:8px 0;border:1px solid #d8d8d8;border-radius:10px;">
-
-    <input type="tel" name="phone" placeholder="Phone"
-           style="width:100%;padding:14px 16px;margin:8px 0;border:1px solid #d8d8d8;border-radius:10px;">
-
-    <input type="number" name="amount" placeholder="Desired Loan Amount (USD)" required
-           style="width:100%;padding:14px 16px;margin:8px 0;border:1px solid #d8d8d8;border-radius:10px;">
-
-    <textarea name="message" rows="5" placeholder="Tell us about your financing needs…"
-              style="width:100%;padding:14px 16px;margin:8px 0;border:1px solid #d8d8d8;border-radius:10px;"></textarea>
-
-    <!-- Helpful extras -->
-    <input type="hidden" name="_subject" value="New Loan Application from jeffreyleejr6.github.io">
-    <input type="text" name="_gotcha" style="display:none"> <!-- honeypot for spam -->
-    <input type="hidden" name="_next" value="https://jeffreyleejr6.github.io/thanks.html"> <!-- after-submit page -->
-
-    <button type="submit"
-      style="width:100%;padding:14px 16px;margin-top:8px;border:0;border-radius:12px;font-weight:700;
-             background:#5b76ff;color:#fff;cursor:pointer;">
-      Submit Application
-    </button>
-  </form>
-
-  <p style="font-size:12px;opacity:.7;margin-top:12px;">
-    By submitting, you agree to be contacted by phone, email, or WhatsApp.
-  </p>
-</section>
+    <script>
+        function updateLoanValue(value) {
+            document.getElementById("loanValue").innerText = `$${Number(value).toLocaleString()}`;
+        }
+    </script>
+</body>
+</html>
